@@ -26,10 +26,23 @@
                 <a href="#" class="mr-5">Third Link</a>
                 <a href="#" class="mr-5">Fourth Link</a>
             </nav>
-            <button onclick="modeToggle();" class="inline-flex items-center bg-black text-white border-0 py-2 px-3 focus:outline-none 
+            <!-- <button onclick="modeToggle();" class="inline-flex items-center bg-black text-white border-0 py-2 px-3 focus:outline-none 
                 active:translate-x-1 active:translate-y-1 duration-200 rounded-lg text-base mt-4 md:mt-0">
                 Dark Mode
-            </button>
+            </button> -->
+
+
+            <label class="inline-flex items-center cursor-pointer">
+                <input id="toggler" type="checkbox" value="" class="sr-only peer">
+                <div id="toggleDiv" class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 
+                peer-focus:ring-black dark:peer-focus:ring-black rounded-full peer 
+                peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white 
+                after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border 
+                after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-black"></div>
+                <span id="toggleP" class="ms-3 text-sm font-medium">Enable Dark Mode</span>
+              </label>
+              
+
         </div>
     </header>
     <!-- Navigations ENd -->

@@ -1,4 +1,5 @@
 modeToggleFlag = false;
+let toggle = document.getElementById("toggler");
 
 const modeToggle = () => {
     if (modeToggleFlag === false) {
@@ -10,13 +11,15 @@ const modeToggle = () => {
     }
 };
 
+toggle.addEventListener("click", modeToggle);
+
+
 const enableLightMode = () => {
     let background = document.querySelector("body").classList;
     background.remove("bg-black");
     background.remove("text-white");
     background.add("text-black");
     let buttons = document.querySelectorAll("button");
-    buttons[0].textContent = "Dark Mode";
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove("bg-white");
         buttons[i].classList.remove("text-gray-800");
@@ -32,6 +35,15 @@ const enableLightMode = () => {
         childDiv.classList.add("bg-white");
         childDiv.classList.remove("bg-gray-800");
     }
+
+    const toggleDiv = document.getElementById("toggleDiv").classList;
+    toggleDiv.remove("bg-white");
+    toggleDiv.remove("peer-checked:bg-gray-300");
+    toggleDiv.add("bg-gray-200");
+    toggleDiv.add("peer-checked:bg-black");
+
+    let toggleP = document.getElementById("toggleP") ;
+    toggleP.innerText = "Enable Dark Mode" ;
 };
 
 const enableDarkMode = () => {
@@ -40,7 +52,6 @@ const enableDarkMode = () => {
     background.add("text-white");
     background.remove("text-black");
     let buttons = document.querySelectorAll("button");
-    buttons[0].textContent = "Light Mode";
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.add("bg-white");
         buttons[i].classList.add("text-gray-800");
@@ -56,4 +67,12 @@ const enableDarkMode = () => {
         childDiv.classList.remove("bg-white");
         childDiv.classList.add("bg-gray-800");
     }
+    const toggleDiv = document.getElementById("toggleDiv").classList;
+    toggleDiv.add("bg-white");
+    toggleDiv.add("peer-checked:bg-gray-300");
+    toggleDiv.remove("bg-gray-200");
+    toggleDiv.remove("peer-checked:bg-black");
+
+    let toggleP = document.getElementById("toggleP") ;
+    toggleP.innerText = "Enable Light Mode" ;
 }
