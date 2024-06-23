@@ -18,4 +18,4 @@ Check out the live demo of the project - https://gkdey17cse.github.io/DarkLightM
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/Dark-Light-Mode-Toggle.git
+   git clone https://github.com/gkdey17cse/DarkLightModeToggle.git
